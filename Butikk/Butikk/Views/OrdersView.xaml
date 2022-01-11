@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Butikk.Views.OrdersView"
+             xmlns:pancake="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             xmlns:helpers="clr-namespace:Butikk.Helpers"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="True"
+             Visual="Material"
+             BackgroundColor="LimeGreen">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS" Value="Material Design Icons"/>
+                <On Platform="Android" Value="materialdesignicons-webfont.ttf#Material Design Icons"/>
+            </OnPlatform>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <ImageButton Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
+                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=White}"
+                         Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
+                         VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"/>
+            <Label Text="HomeStore" FontSize="40" TextColor="WhiteSmoke"
+                   FontFamily="BebasNeue" HorizontalOptions="Center" VerticalOptions="Start"/>
+
+            <Label x:Name="LabelName" FontSize="Subtitle" Margin="20,0" TextColor="WhiteSmoke"
+                   HorizontalOptions="Center" VerticalOptions="End"/>
+
+            <pancake:PancakeView BackgroundColor="WhiteSmoke" CornerRadius="60,60,0,0"
+                                 Grid.Row="1">
+                <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                    <Label Text="Thanks for placing an order at the HomeStore!"/>
+                    <Label Text="Please note down your order ID for further tracking"/>
+                    <Label x:Name="LabelOrderID" TextColor="Purple" FontSize="Subtitle"/>
+
+                    <Button Text="View all products"
+                            WidthRequest="200"
+                            BackgroundColor="Purple"
+                            HorizontalOptions="Center"
+                            CornerRadius="20"
+                            Clicked="Button_Clicked"/>
+                </StackLayout>
+            </pancake:PancakeView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
