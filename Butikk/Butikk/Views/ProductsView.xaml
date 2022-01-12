@@ -53,7 +53,8 @@
                              Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
                     Glyph={x:Static helpers:IconFont.ViewList}, Size=40,Color=#5C80BC}"
                              Margin="0,0,10,0" HorizontalOptions="End"
-                             BackgroundColor="#CDD1C4"/>
+                             BackgroundColor="#CDD1C4"
+                             Command="{Binding OrdersHistoryCommand}"/>
 
                 <Label Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
                        Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"

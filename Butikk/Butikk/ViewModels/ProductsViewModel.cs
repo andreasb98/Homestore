@@ -40,6 +40,7 @@ namespace Butikk.ViewModels
 
         public Command ViewCartCommand { get; set; }
         public Command LogoutCommand { get; set; }
+        public Command OrdersHistoryCommand { get; set; }
 
         public ProductsViewModel()
         {
@@ -56,9 +57,15 @@ namespace Butikk.ViewModels
 
             ViewCartCommand = new Command(async () => await ViewCartAsync());
             LogoutCommand = new Command(async () => await LogoutAsync());
+            OrdersHistoryCommand = new Command(async () => await OrdersHistoryAsync());
 
             GetCategories();
             GetLatestItems();
+        }
+
+        private async Task OrdersHistoryAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushModalAsync(new OrderHistoryView());
         }
 
         private async Task ViewCartAsync()

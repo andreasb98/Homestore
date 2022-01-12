@@ -4,7 +4,8 @@ using System.Text;
 
 namespace Butikk.Models
 {
-    public class Order
+    //Subclass of orderdetails
+    public class OrdersHistory : List<OrderDetails>
     {
         public string OrderId { get; set; }
         public string Username { get; set; }

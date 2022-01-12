@@ -27,7 +27,7 @@ namespace Butikk.Services
 
             //Generate unique ID
             var orderId = Guid.NewGuid().ToString();
-            var uname = Preferences.Get("UserName", "Guest");
+            var uname = Preferences.Get("Username", "Guest");
 
             decimal totalCost = 0;
 
