@@ -62,5 +62,19 @@ namespace Butikk.Services
             }
             return latestItems;
         }
+
+        //Search the DB
+        public async Task<ObservableCollection<FurnitureItem>> GetItemsByQueryAsync(string searchTerm)
+        {
+            var itemsByQuery = new ObservableCollection<FurnitureItem>();
+            var items = (await GetFurnitureItemsAsync()).Where(
+                p => p.Name.Contains(searchTerm)).ToList();
+
+            foreach (var item in items)
+            {
+                itemsByQuery.Add(item);
+            }
+            return itemsByQuery;
+        }
     }
 }

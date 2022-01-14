@@ -28,5 +28,15 @@ namespace Butikk.Views
 
             ((CollectionView)sender).SelectedItem = null;
         }
+
+        private async void CVLatest_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selectedProduct = e.CurrentSelection.FirstOrDefault() as FurnitureItem;
+            if (selectedProduct == null)
+                return;
+            
+            await Navigation.PushModalAsync(new ProductDetailsView(selectedProduct));
+            ((CollectionView)sender).SelectedItem = null;
+        }
     }
 }

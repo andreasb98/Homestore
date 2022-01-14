@@ -198,4 +198,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\washer_machine_1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\office_chair_1.png" />
+  </ItemGroup>
 </Project>

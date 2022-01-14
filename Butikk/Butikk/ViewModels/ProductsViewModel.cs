@@ -35,12 +35,26 @@ namespace Butikk.ViewModels
             }
         }
 
+        private string _searchTerm;
+        public string searchTerm
+        {
+            get { return _searchTerm; }
+            set 
+            {
+                _searchTerm = value;
+                OnPropertyChanged();
+            }
+        }
+
+
         public ObservableCollection<Category> Categories { get; set; }
         public ObservableCollection<FurnitureItem> LatestItems { get; set; }
 
         public Command ViewCartCommand { get; set; }
         public Command LogoutCommand { get; set; }
         public Command OrdersHistoryCommand { get; set; }
+        public Command SearchViewCommand { get; set; }
+
 
         public ProductsViewModel()
         {
@@ -58,9 +72,15 @@ namespace Butikk.ViewModels
             ViewCartCommand = new Command(async () => await ViewCartAsync());
             LogoutCommand = new Command(async () => await LogoutAsync());
             OrdersHistoryCommand = new Command(async () => await OrdersHistoryAsync());
+            SearchViewCommand = new Command(async () => await SearchViewAsync());
 
             GetCategories();
             GetLatestItems();
+        }
+
+        private async Task SearchViewAsync()
+        {
+            await Application.Current.MainPage.Navigation.PushModalAsync(new SearchResultView(searchTerm));
         }
 
         private async Task OrdersHistoryAsync()
