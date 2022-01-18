@@ -7,7 +7,7 @@
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              ios:Page.UseSafeArea="True"
              Visual="Material"
-             BackgroundColor="LimeGreen">
+             BackgroundColor="DarkOrange">
     <ContentPage.Resources>
         <ResourceDictionary>
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
@@ -24,9 +24,10 @@
             </Grid.RowDefinitions>
 
             <ImageButton Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=White}"
+                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=Black}"
                          Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
-                         VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"/>
+                         VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"
+                         BackgroundColor="Transparent"/>
             <Label Text="HomeStore" FontSize="40" TextColor="WhiteSmoke"
                    FontFamily="BebasNeue" HorizontalOptions="Center" VerticalOptions="Start"/>
 

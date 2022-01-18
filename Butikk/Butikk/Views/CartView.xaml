@@ -8,7 +8,7 @@
              xmlns:vm="clr-namespace:Butikk.ViewModels"
              x:Class="Butikk.Views.CartView"
              Visual="Material"
-             BackgroundColor="LimeGreen">
+             BackgroundColor="DarkOrange">
     <ContentPage.Resources>
         <ResourceDictionary>
             <OnPlatform x:Key="MaterialFontFamily" x:TypeArguments="x:String">
@@ -21,7 +21,7 @@
         <vm:CartViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Content>
-        <Grid BackgroundColor="LimeGreen">
+        <Grid BackgroundColor="DarkOrange">
             <Grid.RowDefinitions>
                 <RowDefinition Height="100"/>
                 <RowDefinition Height="*"/>
@@ -37,9 +37,10 @@
             <Label x:Name="LabelName" FontSize="Subtitle" TextColor="WhiteSmoke"
                    HorizontalOptions="Center" VerticalOptions="End"/>
             <ImageButton Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=White}"
+                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=Black}"
                          Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
-                         VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"/>
+                         VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"
+                         BackgroundColor="Transparent"/>
 
             <pancake:PancakeView Grid.Row="1" BackgroundColor="WhiteSmoke"
                                  CornerRadius="60,60,0,0">
@@ -57,11 +58,11 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Label Text="Id" Grid.Column="0" FontSize="Subtitle" TextColor="Green"/>
-                                <Label Text="Name" Grid.Column="1" FontSize="Subtitle" TextColor="Green"/>
-                                <Label Text="Price" Grid.Column="2" FontSize="Subtitle" TextColor="Green"/>
-                                <Label Text="Qty" Grid.Column="3" FontSize="Subtitle" TextColor="Green"/>
-                                <Label Text="Cost" Grid.Column="4" FontSize="Subtitle" TextColor="Green"/>
+                                <Label Text="Id" Grid.Column="0" FontSize="Subtitle" TextColor="Purple"/>
+                                <Label Text="Name" Grid.Column="1" FontSize="Subtitle" TextColor="Purple"/>
+                                <Label Text="Price" Grid.Column="2" FontSize="Subtitle" TextColor="Purple"/>
+                                <Label Text="Qty" Grid.Column="3" FontSize="Subtitle" TextColor="Purple"/>
+                                <Label Text="Cost" Grid.Column="4" FontSize="Subtitle" TextColor="Purple"/>
                             </Grid>
                         </DataTemplate>
                     </ListView.HeaderTemplate>

@@ -16,9 +16,9 @@
             </Grid.RowDefinitions>
 
             <StackLayout Grid.Row="0" VerticalOptions="Center">
-                <Image Source="https://i.pinimg.com/originals/33/b8/69/33b869f90619e81763dbf1fccc896d8d.jpg" WidthRequest="100" HeightRequest="300"/>
+                <Image Source="Logo.png" WidthRequest="100" HeightRequest="300"/>
 
-                <Label Text="Login Form" FontFamily="BebasNeue"
+                <Label Text="Login" FontFamily="BebasNeue"
                        TextColor="Purple" FontSize="40" HorizontalOptions="Center"/>
             </StackLayout>
 

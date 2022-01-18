@@ -1,4 +1,5 @@
 ﻿using Butikk.Views;
+using Plugin.FirebasePushNotification;
 using System;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -24,6 +25,14 @@ namespace Butikk
             {
                 MainPage = new ProductsView();
             }
+
+            //Firebase PushNotifications
+            CrossFirebasePushNotification.Current.OnTokenRefresh += Current_OnTokenRefresh;
+        }
+
+        private void Current_OnTokenRefresh(object source, FirebasePushNotificationTokenEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine($"Token: {e.Token}");
         }
 
         protected override void OnStart()

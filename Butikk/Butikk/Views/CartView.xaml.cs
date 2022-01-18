@@ -15,7 +15,7 @@ namespace Butikk.Views
         public CartView()
         {
             InitializeComponent();
-            LabelName.Text = "Welcome " + Preferences.Get("Username", "Guest") + ",";
+            LabelName.Text = "Cart of " + Preferences.Get("Username", "Guest");
         }
 
         async void ImageButton_Clicked(object sender, EventArgs e)

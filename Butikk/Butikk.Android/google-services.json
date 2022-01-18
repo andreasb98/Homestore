@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1039000129596",
+    "firebase_url": "https://homestore-1713e-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "homestore-1713e",
+    "storage_bucket": "homestore-1713e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1039000129596:android:a94f9580947335ad597339",
+        "android_client_info": {
+          "package_name": "com.companyname.butikk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1039000129596-keo2gf6g1a8c8sqdhf2ks61u64ftvpfq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA255weAXzaQB08jUx_Z3W1sQsJkvsgOO8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1039000129596-keo2gf6g1a8c8sqdhf2ks61u64ftvpfq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

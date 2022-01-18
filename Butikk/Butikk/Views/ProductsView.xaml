@@ -7,7 +7,7 @@
              xmlns:helpers="clr-namespace:Butikk.Helpers"
              xmlns:vm="clr-namespace:Butikk.ViewModels"
              x:Class="Butikk.Views.ProductsView"
-             BackgroundColor="#CDD1C4">
+             BackgroundColor="White">
     
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -45,15 +45,14 @@
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Label Text="Welcome" Grid.Row="0" Grid.Column="0" TextColor="Silver"/>
-                <Label Text="{Binding Username}" Grid.Row="1" Grid.Column="0" FontSize="20"
+                <Label Text="{Binding UserName}" Grid.Row="1" Grid.Column="0" FontSize="20"
                        FontAttributes="Bold"/>
 
                 <ImageButton Grid.Row="0" Grid.Column="1" Grid.RowSpan="2"
                              Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                    Glyph={x:Static helpers:IconFont.ViewList}, Size=40,Color=#5C80BC}"
+                    Glyph={x:Static helpers:IconFont.ViewList}, Size=40,Color=DarkOrange}"
                              Margin="0,0,10,0" HorizontalOptions="End"
-                             BackgroundColor="#CDD1C4"
+                             BackgroundColor="White"
                              Command="{Binding OrdersHistoryCommand}"/>
 
                 <Label Text="{Binding UserCartItemsCount}" FontSize="Subtitle"
@@ -62,17 +61,17 @@
                 
                 <ImageButton Grid.Row="0" Grid.Column="2" Grid.RowSpan="2"
                              Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                    Glyph={x:Static helpers:IconFont.Shopping}, Size=35,Color=#4D5061}"
+                    Glyph={x:Static helpers:IconFont.Shopping}, Size=35,Color=DarkOrange}"
                              Margin="0,0,10,0" HorizontalOptions="End"
                              Command="{Binding ViewCartCommand}"
-                             BackgroundColor="#CDD1C4"/>
+                             BackgroundColor="White"/>
                 
                 <ImageButton Grid.Row="0" Grid.Column="3" Grid.RowSpan="2"
                              Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                    Glyph={x:Static helpers:IconFont.Logout}, Size=35,Color=#30323D}"
+                    Glyph={x:Static helpers:IconFont.Logout}, Size=35,Color=DarkOrange}"
                              Margin="0,0,10,0" HorizontalOptions="End"
                              Command="{Binding LogoutCommand}"
-                             BackgroundColor="#CDD1C4"/>
+                             BackgroundColor="White"/>
             </Grid>
 
             <Grid Grid.Row="1" Grid.Column="0">
@@ -88,7 +87,7 @@
                 <ImageButton Grid.Column="1" Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
                     Glyph={x:Static helpers:IconFont.SearchWeb}, Size=40,Color=Black}"
                              Margin="0,0,10,0" HorizontalOptions="End"
-                             BackgroundColor="#CDD1C4"
+                             BackgroundColor="White"
                              Command="{Binding SearchViewCommand}"/>
             </Grid>
 
@@ -99,11 +98,12 @@
                             ItemsLayout="HorizontalList"
                             SelectionChanged="CollectionView_SelectionChanged"
                             SelectionMode="Single"
-                            Grid.Row="2">
+                            Grid.Row="2"
+                            BackgroundColor="White">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout Padding="0,0,15,0">
-                            <Frame HeightRequest="50" HasShadow="False" BackgroundColor="#Cdd1C4" CornerRadius="10">
+                            <Frame HeightRequest="30" HasShadow="False" BackgroundColor="White" CornerRadius="10">
                                 <Image Source="{Binding ImageUrl}"/>
                             </Frame>
                             <Label Text="{Binding CategoryName}" HorizontalTextAlignment="Center"/>
@@ -112,7 +112,8 @@
                 </CollectionView.ItemTemplate>
             </CollectionView>
 
-            <Label Grid.Row="3" Text="Latest Items" FontSize="25" FontAttributes="Bold"/>
+            <Label Grid.Row="3" Text="Latest Items" FontSize="25" FontAttributes="Bold"
+                   TextColor="Black"/>
             <CollectionView ItemsSource="{Binding LatestItems}"
                             Margin="0,20,10,0" VerticalOptions="Start"
                             VerticalScrollBarVisibility="Never"

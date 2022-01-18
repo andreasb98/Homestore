@@ -7,7 +7,7 @@
              xmlns:vm="clr-namespace:Butikk.ViewModels"
              ios:Page.UseSafeArea="True"
              Visual="Material"
-             BackgroundColor="LimeGreen"
+             BackgroundColor="DarkOrange"
              x:Class="Butikk.Views.OrderHistoryView">
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -28,9 +28,10 @@
             </Grid.RowDefinitions>
 
             <ImageButton Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=White}"
+                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30, Color=Black}"
                 Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
-                VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"  />
+                VerticalOptions="Start" Margin="10,30" Clicked="ImageButton_Clicked"
+                         BackgroundColor="Transparent"/>
 
             <Label Text="HomeStore" FontSize="40" TextColor="WhiteSmoke"
                    FontFamily="Roboto" HorizontalOptions="Center" VerticalOptions="Start" />

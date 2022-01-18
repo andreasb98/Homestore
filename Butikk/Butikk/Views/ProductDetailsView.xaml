@@ -32,10 +32,11 @@
                        TextColor="White" FontAttributes="Bold"
                        FontSize="35" Margin="25,-85,0,0"/>
                 <ImageButton Source="{FontImage FontFamily={StaticResource MaterialFontFamily},
-                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30,Color=White}"
+                    Glyph={x:Static helpers:IconFont.ArrowLeft}, Size=30,Color=Black}"
                              Grid.Row="0" HorizontalOptions="Start" Aspect="AspectFit"
                              VerticalOptions="Start" Margin="10,30"
-                             Clicked="ImageButton_Clicked"/>
+                             Clicked="ImageButton_Clicked"
+                             BackgroundColor="Transparent"/>
 
                 <StackLayout Grid.Row="2" Spacing="10" Padding="10"
                              VerticalOptions="Start">
