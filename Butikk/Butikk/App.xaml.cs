@@ -1,6 +1,7 @@
 ﻿using Butikk.Views;
 using Plugin.FirebasePushNotification;
 using System;
+using Butikk.Helpers;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,9 @@ namespace Butikk
 
             //MainPage = new LoginView();
             //MainPage = new NavigationPage(new SettingsView());
+
+            var createCartHelper = new CreateCartTable();
+            createCartHelper.CreateTable();
 
             string uname = Preferences.Get("Username", String.Empty);
             if (String.IsNullOrEmpty(uname))
